@@ -1,1 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+
+
+// colors palette
+// $blue : #575a6c;
+$blue : #212e7a;
+$green : #b4c540;
+$white : #e0e2d2;
+$light-blue : #3686c9;
+
+html,body {
+    background-color: $blue;
+    color: $white;
+}
