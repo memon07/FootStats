@@ -18,8 +18,6 @@ export class ClubComponent implements OnInit {
         this.club = tempArray.filter(e =>{
           return e.team_key === this.route.snapshot.params.team_key
         })
-        console.log(this.route.snapshot.params.team_key)
-        console.log(this.club)
       },
       error => {
         console.log(error)

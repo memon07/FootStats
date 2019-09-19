@@ -10,5 +10,22 @@ $light-blue : #3686c9;
 
 body {
     background-color: $blue !important;
-    color: $white;
+    color: $white !important;
+}
+
+
+.ant-table-thead>tr>th {
+    color: $white !important; 
+    background-color: $blue !important;
+    font-size : 20px !important
+}
+
+.ant-table {
+    font-size: 18px !important;
+    color: $white !important;
+}
+
+.ant-table-placeholder {
+    color: $white !important; 
+    background-color: $blue !important;
 }

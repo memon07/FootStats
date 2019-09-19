@@ -1,3 +1,35 @@
-<p>
-  club works!
-</p>
+<div class="row clb p-1">
+  <div class="col-12">
+    <h1>{{club[0].team_name}}</h1>
+  </div>
+  <div class="col-12">
+    <nz-table #basicTable class="tb" [nzData]="dataSet">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Number</th>
+          <th>Country</th>
+          <th>Role</th>
+          <th>Goals</th>
+          <th>Age</th>
+          <th>MP</th>
+          <th>YC</th>
+          <th>RC</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let data of club[0].players">
+          <td>{{data.player_name}}</td>
+          <td>{{data.player_number}}</td>
+          <td>{{data.player_country}}</td>
+          <td>{{data.player_type}}</td>
+          <td>{{data.player_goals}}</td>
+          <td>{{data.player_age}}</td>
+          <td>{{data.player_match_played}}</td>
+          <td>{{data.player_yellow_cards}}</td>
+          <td>{{data.player_red_cards}}</td>
+        </tr>
+      </tbody>
+    </nz-table>
+  </div>
+</div>
