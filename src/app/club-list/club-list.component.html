@@ -1,1 +1,9 @@
 <app-header></app-header>
+<div class="row cl">
+    <div class="col-md-3 col-sm-12 pt-2 pb-2"  *ngFor="let c of clubs">
+        <nz-card class="cl-card text-center" [routerLink]="['/club',c.team_key]">
+            <img src={{c.team_badge}} alt={{c.team_name}}/>
+           <!-- sdf {{c.team_name}} -->
+        </nz-card>
+    </div>
+</div>

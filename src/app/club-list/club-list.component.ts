@@ -4,14 +4,15 @@ import { ClubListService } from './club-list.service';
 @Component({
   selector: 'app-club-list',
   templateUrl: './club-list.component.html',
-  styleUrls: ['./club-list.component.sass']
+  styleUrls: ['./club-list.component.scss']
 })
 export class ClubListComponent implements OnInit {
-  clubs :'';
+  clubs = [];
 
   constructor(private clubservice : ClubListService) { 
     this.clubservice.getClubs().subscribe(result =>{
-      console.log(result)
+      this.clubs.push(...result)
+      console.log(this.clubs)
     },
     error => {
       console.log(error)

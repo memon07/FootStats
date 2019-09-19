@@ -1,0 +1,19 @@
+ @import './../../styles.scss';
+
+.cl {
+    background-color: $blue;
+    margin-left: 0px;
+    margin-right: 0px;
+    color: $green;
+}
+
+.cl .cl-card {
+    padding: 10px;
+    cursor: pointer;
+    background-color: $blue;
+}
+
+.cl .cl-card:hover {
+    background-color: $green;
+    border-color: $green;   
+}
