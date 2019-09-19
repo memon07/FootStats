@@ -29,3 +29,8 @@ body {
     color: $white !important; 
     background-color: $blue !important;
 }
+
+.ant-table-tbody>tr:hover:not(.ant-table-expanded-row)>td{
+    background: $white;
+    color: $blue;
+}
