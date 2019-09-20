@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ClubListService } from '../club-list/club-list.service';
+import * as cloneDeep from 'lodash/cloneDeep';
 
 
 @Component({
@@ -14,7 +15,8 @@ export class ClubComponent implements OnInit {
 
   ngOnInit() {
       this.clubservice.getClubs().subscribe(result =>{
-        let tempArray = [...result]
+        // let tempArray = [...result]
+        let tempArray = cloneDeep(result)
         this.club = tempArray.filter(e =>{
           return e.team_key === this.route.snapshot.params.team_key
         })
